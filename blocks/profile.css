@@ -4,26 +4,18 @@
   border-bottom: 1px solid rgba(33, 33, 33, 0.4);
 }
 
-
-
 .profile__avatar {
-height: 190px;
-width: 190px;
-margin-right: 20px;
-border-radius: 8px;
-object-fit: cover;
-
-
+  height: 190px;
+  width: 190px;
+  margin-right: 20px;
+  border-radius: 8px;
+  object-fit: cover;
 }
-
-
 
 .profile__column {
   display: flex;
   flex-direction: column;
 }
-
-
 
 .profile__name {
   margin: 0 0 12px;
@@ -39,10 +31,9 @@ object-fit: cover;
   -webkit-box-orient: vertical;
 }
 
-
 .profile__description {
   margin: 0;
-   font-family: Poppins, Arial, Helvetica, sans-serif;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 100%;
@@ -56,14 +47,12 @@ object-fit: cover;
   -webkit-box-orient: vertical;
 }
 
-
-
-
 .profile__edit-btn {
   margin-top: auto;
   display: flex;
+  gap: 8px;
   padding: 0;
-    background-color: transparent;
+  background-color: transparent;
   color: #212121;
   border: transparent;
   font-family: Poppins, Arial, Helvetica, sans-serif;
@@ -72,17 +61,15 @@ object-fit: cover;
   line-height: 100%;
   opacity: 70%;
   cursor: pointer;
-
 }
 
 .profile__edit-btn:hover {
   opacity: 100%;
 }
 
-
 .profile__add-btn {
   display: flex;
-    flex-direction: row;
+  flex-direction: row;
   width: 149px;
   height: 52px;
   border-radius: 8px;
@@ -95,15 +82,11 @@ object-fit: cover;
   margin-top: auto;
   margin-right: 0;
   cursor: pointer;
-
-
 }
-
 
 .profile__add-btn:hover {
   opacity: 80%;
 }
-
 
 .profile__edit-btn-text {
   font-family: Poppins, Arial, sans-serif;
@@ -123,56 +106,41 @@ object-fit: cover;
   padding-left: 8px;
 }
 
-
-
 @media screen and (max-width: 627px) {
-.profile {
+  .profile {
     flex-direction: column;
     max-width: 288px;
     align-items: center;
     text-align: center;
     padding-top: 20px;
-
-  }
-  
-
-.profile__avatar {
-  margin: 0 0 12px;
-  width: 80px;
-  height: 80px;
-}
-
-
-  
-.profile__name {
-  font-size: 20px;
-  margin: 0 0 6px;
-  max-width: 288px;
   }
 
+  .profile__avatar {
+    margin: 0 0 12px;
+    width: 80px;
+    height: 80px;
+  }
 
-.profile__description {
- max-width: 288px;
-  margin: 0 0 32px;
- font-size: 16px;
+  .profile__name {
+    font-size: 20px;
+    margin: 0 0 6px;
+    max-width: 288px;
+  }
 
+  .profile__description {
+    max-width: 288px;
+    margin: 0 0 32px;
+    font-size: 16px;
+  }
 
-}
-
-
-.profile__column {
+  .profile__column {
     margin: 0 0 20px;
     align-items: center;
   }
-  
-  
-  
-.profile__add-btn {
-  margin: 0;
-  width: 288px;
-  height: 52px;
+
+  .profile__add-btn {
+    margin: 0;
+    width: 288px;
+    height: 52px;
   }
-
-
-
 }
