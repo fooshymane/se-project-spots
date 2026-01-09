@@ -64,7 +64,7 @@
   opacity: 0.4;
 }
 
-.card__like-button:hover {
+.card__like-btn:hover {
   opacity: 1;
 
 }
