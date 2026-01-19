@@ -1,0 +1,230 @@
+.profile {
+  display: flex;
+  padding: 34px 0 20px;
+  border-bottom: 1px #21212166 solid;
+}
+
+.profile__avatar {
+  width: 190px;
+  height: 190px;
+  margin-right: 20px;
+  border-radius: 8px;
+  position: relative;
+}
+
+.profile__avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.profile__avatar::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 8px;
+}
+
+.profile__avatar:hover::after {
+  opacity: 1;
+}
+
+.profile__avatar:hover .profile__avatar-button {
+  opacity: 1;
+}
+
+.profile__avatar-button {
+  position: absolute;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  padding: 0;
+  font-weight: 500;
+  cursor: pointer;
+  transition: opacity 0.3s ease-in;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+  width: auto;
+  z-index: 1;
+  opacity: 0;
+}
+
+.profile__avatar-button::before {
+  content: url(../Images/edit-icon-white.svg);
+  width: 16px;
+  height: 16px;
+}
+
+.profile__column {
+  display: flex;
+  flex-direction: column;
+  max-width: 420px;
+}
+
+.profile__edit-button {
+  margin-top: auto;
+  background-color: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  color: #212121;
+  opacity: 0.7;
+  padding: 0;
+  margin-right: auto;
+  font-weight: 500;
+  cursor: pointer;
+  transition: opacity 0.3s ease-in;
+}
+
+.profile__edit-button::before {
+  content: url(../Images/pencil.svg);
+  width: 16px;
+  height: 16px;
+}
+
+.profile__edit-button:hover {
+  opacity: 1;
+}
+
+.profile__add-button {
+  margin-left: auto;
+  width: 157px;
+  height: 52px;
+  border-radius: 8px;
+  color: #fcf5e5;
+  background-color: #212121;
+  border: none;
+  margin-top: auto;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: opacity 0.3s ease-in;
+}
+
+.profile__add-button::before {
+  content: url(../Images/plus.svg);
+  width: 16px;
+  height: 16px;
+}
+
+.profile__add-button:hover {
+  opacity: 0.8;
+}
+
+.profile__name {
+  margin: 0 0 12px;
+  font-size: 32px;
+  font-weight: 500;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+ -webkit-box-orient: vertical;
+}
+
+.profile__description {
+  opacity: 0.7;
+  margin: 0;
+  font-weight: 500;
+  line-height: 1.5;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+ -webkit-box-orient: vertical;
+  max-width: 420px;
+}
+
+@media screen and (max-width: 690px) {
+  .profile {
+    flex-direction: column;
+    max-width: 413px;
+    align-items: center;
+    text-align: center;
+    padding-top: 20px;
+  }
+
+  .profile__avatar {
+    margin: 0 0 12px;
+    width: 80px;
+    height: 80px;
+  }
+
+  .profile__name {
+    font-size: 20px;
+    margin-bottom: 6px;
+  }
+
+  .profile__description {
+    margin-bottom: 32px;
+  }
+
+  .profile__add-button {
+    padding: 0px;
+    width: 288px;
+    margin: 0 auto;
+  }
+
+  .profile__edit-button {
+    margin: 0;
+  }
+
+  .profile__column {
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+ 
+  .profile__avatar-button span {
+    display: none;
+  }
+
+  .profile__avatar-button {
+    width: 30px;
+    height: 30px;
+    background: none;
+    opacity: 1; 
+    font-size: 0;
+    position: absolute;
+    transform: none;
+  }
+
+  .profile__avatar-button::before {
+    content: "";
+    background-image: url("../Images/pencil.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: -4.66px;
+    right: -4.66px;
+    opacity: 1;
+    width: 23.34px;
+    height: 23.34px;
+  }
+
+  .profile__avatar::after {
+    display: none; 
+  }
+
+  .profile__avatar:hover::after {
+    opacity: 0; 
+  }
+
+  .profile__avatar:hover .profile__avatar-button {
+    opacity: 1; 
+  }
+}

@@ -42,6 +42,6 @@ This webpage is deployed to GitHub Pages
 ## About Video
 
  video overview of the project
- - [Video Link](https://www.loom.com/share/9aaa855195ff480aa7445e12584635ca)
+ - [Video Link](https://www.loom.com/share/d4aabd432445417983530611080bf86e)
 
   
