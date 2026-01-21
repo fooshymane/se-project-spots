@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="image viewing app" />
+    <meta name="author" content="Adam Harfoush" />
+    <meta name="keywords" content="spots app" />
+  <title>Spots</title>
+  </head>
+  <body>
+   <div class="page">
+      <header class="header">
+        <img src="<%=require('./images/logo.svg')%> " alt="Spot Logo" class="header__logo" />
+      </header>
+      <main class="content">
+        <div class="modal" id="edit-avatar-modal">
+          <div class="modal__container">
+            <button
+              class="modal__close_button modal__close"
+              type="button"
+            ></button>
+            <h2 class="modal__title">Edit profile avatar</h2>
+            <form class="modal__form" id="avatar-form" novalidate>
+              <label for="profile-picture-input" class="modal__label"
+                >Profile Picture<input
+                  type="url"
+                  required
+                  class="modal__input"
+                  id="profile-picture-input"
+                  placeholder="Paste the link to an image" /><span
+                  id="profile-picture-input-error"
+                  class="modal__error"
+                ></span
+              ></label>
+              <button type="submit" class="modal__submit-button">Save</button>
+            </form>
+          </div>
+        </div>
+        <div class="modal" id="edit-profile-modal">
+          <div class="modal__container">
+            <button
+              class="modal__close_button modal__close"
+              type="button"
+            ></button>
+            <h2 class="modal__title">Edit profile</h2>
+            <form class="modal__form" id="profile-form" novalidate>
+              <label for="profile-name-input" class="modal__label"
+                >Name<input
+                  required
+                  class="modal__input"
+                  id="profile-name-input"
+                  placeholder="Type your name"
+                  minlength="2"
+                  maxlength="40" /><span
+                  id="profile-name-input-error"
+                  class="modal__error"
+                ></span
+              ></label>
+              <label for="profile-description-input" class="modal__label"
+                >Description<input
+                  required
+                  class="modal__input"
+                  id="profile-description-input"
+                  placeholder="Describe yourself"
+                  minlength="2"
+                  maxlength="200" /><span
+                  id="profile-description-input-error"
+                  class="modal__error"
+                ></span
+              ></label>
+              <button type="submit" class="modal__submit-button">Save</button>
+            </form>
+          </div>
+        </div>
+        <div class="modal" id="new-post-modal">
+          <div class="modal__container">
+            <button
+              class="modal__close_button modal__close"
+              type="button"
+            ></button>
+            <h2 class="modal__title">New post</h2>
+            <form class="modal__form" id="newPost-form" novalidate>
+              <label for="newPost-link-input" class="modal__label"
+                >Image Link<input
+                  type="url"
+                  required
+                  class="modal__input"
+                  id="newPost-link-input"
+                  placeholder="Paste a link to the picture" /><span
+                  id="newPost-link-input-error"
+                  class="modal__error"
+                ></span
+              ></label>
+              <label for="newPost-caption-input" class="modal__label"
+                >Caption<input
+                  required
+                  class="modal__input"
+                  id="newPost-caption-input"
+                  placeholder="Type your caption"
+                  minlength="2"
+                  maxlength="30" /><span
+                  id="newPost-caption-input-error"
+                  class="modal__error"
+                ></span
+              ></label>
+              <button type="submit" class="modal__submit-button">Save</button>
+            </form>
+          </div>
+        </div>
+        <div class="modal" id="delete-post-modal">
+          <div class="modal__delete-container">
+            <button
+              class="modal__close_button modal__close"
+              type="button"
+            ></button>
+            <h2 class="modal__delete-title">
+              Are you sure you want to delete this image?
+            </h2>
+            <div class="modal__delete-cancel-buttons">
+              <button type="submit" class="modal__delete-button">Delete</button>
+              <button type="button" class="modal__cancel-button">Cancel</button>
+            </div>
+          </div>
+        </div>
+        <div class="modal modal_preview" id="preview-modal">
+          <div class="modal__container modal__container_preview">
+            <button
+              class="modal__close_button modal__close_button_preview modal__close"
+              type="button"
+            ></button>
+            <img class="modal__image" src="" alt="" />
+            <p class="modal__caption"></p>
+          </div>
+        </div>
+        <div class="profile page__section">
+          <div class="profile__avatar">
+            <img alt="" />
+            <button type="button" class="profile__avatar-button">
+              &nbsp;Edit Avatar
+            </button>
+          </div>
+          <div class="profile__column">
+            <h1 class="profile__name"></h1>
+            <p class="profile__description"></p>
+            <button type="button" class="profile__edit-button">
+              &nbsp;Edit Profile
+            </button>
+          </div>
+          <button type="button" class="profile__add-button">
+            &nbsp;New Post
+          </button>
+        </div>
+        <section class="cards page__section">
+          <ul class="cards__list">
+            <template id="card-template"
+              ><li class="card">
+                <img class="card__image" src="" alt="" />
+                <div class="card__content">
+                  <h2 class="card__title"></h2>
+                  <button type="button" class="card__like-button"></button>
+                  <button type="button" class="card__delete-button"></button>
+                </div></li
+            ></template>
+          </ul>
+        </section>
+      </main>
+    </div>
+    <footer class="footer">
+      <p class="footer__copyright">2025 © Spots</p>
+    </footer>
+  </body>
+</html>
